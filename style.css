@@ -31,6 +31,17 @@ img {
   max-width: 100%;
 }
 
+*::selection {
+  background-color: salmon;
+  color: black;
+}
+
+body > header *::selection,
+body > footer *::selection {
+  background-color: black;
+  color: salmon;
+}
+
 /* Use case specific styling */
 .header {
   padding: 16px;
@@ -67,6 +78,18 @@ img {
 
 .main > * + * {
   margin-top: 80px;
+}
+
+.featured-recipe__title--hot::after {
+  content: " 🔥";
+}
+
+.featured-recipe__title--healthy::after {
+  content: " 🥕";
+}
+
+.featured-recipe__title--beef::after {
+  content: " 🐄";
 }
 
 .contact-form__input {
