@@ -43,8 +43,48 @@ img {
   text-shadow: 2px 2px white;
 }
 
+.navigation > .navigation__item + .navigation__item {
+  margin-left: 16px;
+}
+
+.navigation__item {
+  color: black;
+  padding: 4px;
+}
+
+.navigation__item:hover {
+  color: black;
+  text-decoration-color: gold;
+}
+
+.navigation__item:active {
+  background-color: gold;
+}
+
 .main {
   padding: 16px;
+}
+
+.main > * + * {
+  margin-top: 80px;
+}
+
+.contact-form__input {
+  margin-bottom: 16px;
+  border-width: 2px;
+}
+
+.contact-form__input:invalid {
+  border-color: salmon;
+}
+
+.contact-form__textarea {
+  resize: none;
+}
+
+.contact-form:invalid .contact-form__submit {
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .footer {
