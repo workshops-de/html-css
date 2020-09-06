@@ -9,29 +9,79 @@
     <!-- Header -->
     <header>
       <h1>Yummy!</h1>
-      <nav>Navigation</nav>
+      <p>The best food on the planet</p>
+      <nav>
+        <a href="#featured">Featured</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <!-- Main content -->
     <main>
       <article>
-        <h2>Intro</h2>
+        <blockquote>
+          We strive to be the best food blog in the whole web. Food is our
+          passion and we love to bring you the latest recipes.
+        </blockquote>
+        <small>This is what our founder says.</small>
       </article>
 
-      <article>
+      <article id="featured">
         <h2>Featured Recipes</h2>
+        <section>
+          <img src="http://lorempixel.com/400/400/food/" alt="" />
+          <h3>Chicken soup with garlic</h3>
+        </section>
+        <section>
+          <img src="http://lorempixel.com/400/400/food/" alt="" />
+          <h3>Beef with orange juice</h3>
+        </section>
+        <section>
+          <img src="http://lorempixel.com/400/400/food/" alt="" />
+          <h3>Noodle salad with peanuts</h3>
+        </section>
       </article>
 
-      <article>
+      <article id="gallery">
         <h2>Gallery</h2>
+        <img src="http://lorempixel.com/200/200/food/" alt="" />
+        <img src="http://lorempixel.com/200/200/food/" alt="" />
+        <img src="http://lorempixel.com/200/200/food/" alt="" />
+        <img src="http://lorempixel.com/200/200/food/" alt="" />
+        <img src="http://lorempixel.com/200/200/food/" alt="" />
+        <img src="http://lorempixel.com/200/200/food/" alt="" />
       </article>
 
-      <article>
+      <article id="contact">
         <h2>Contact Form</h2>
+        <form>
+          <!-- Name -->
+          <label for="name">Name</label><br />
+          <input type="text" name="name" id="name" required /><br />
+
+          <!-- Email -->
+          <label for="email">Email</label><br />
+          <input type="email" name="email" id="email" required /><br />
+
+          <!-- Message -->
+          <label for="message">Message</label><br />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            required
+          ></textarea
+          ><br />
+          <button type="submit">Send</button>
+        </form>
       </article>
     </main>
 
     <!-- Footer -->
-    <footer>Footer</footer>
+    <footer>
+      <p>Made with ❤️ by Nico</p>
+    </footer>
   </body>
 </html>
