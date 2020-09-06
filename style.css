@@ -1,0 +1,54 @@
+/* Global and general styling */
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Use case specific styling */
+.header {
+  padding: 16px;
+  text-align: center;
+  background-color: salmon;
+}
+
+.header__title {
+  font-family: "Bangers", cursive;
+  text-shadow: 2px 2px white;
+}
+
+.main {
+  padding: 16px;
+}
+
+.footer {
+  padding: 16px;
+  text-align: center;
+  background-color: salmon;
+}
