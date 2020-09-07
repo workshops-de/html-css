@@ -41,6 +41,20 @@ body > footer *::selection {
   color: salmon;
 }
 
+article > h2 {
+  display: flex;
+  align-items: flex-end;
+}
+
+article > h2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  flex-grow: 1;
+  margin-left: 15px;
+  background-color: salmon;
+}
+
 /* Use case specific styling */
 .header {
   padding: 16px;
@@ -73,14 +87,24 @@ body > footer *::selection {
 
 .main {
   padding: 16px;
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 .main > * + * {
   margin-top: 80px;
 }
 
+.featured-recipes__content {
+  display: flex;
+}
+
 .featured-recipe {
   position: relative;
+}
+
+.featured-recipe + .featured-recipe {
+  margin-left: 16px;
 }
 
 .featured-recipe__badge {
@@ -93,6 +117,11 @@ body > footer *::selection {
   border: 3px solid gold;
 }
 
+.featured-recipe__title {
+  padding: 0 16px;
+  text-align: center;
+}
+
 .featured-recipe__title--hot::after {
   content: " 🔥";
 }
@@ -103,6 +132,17 @@ body > footer *::selection {
 
 .featured-recipe__title--beef::after {
   content: " 🐄";
+}
+
+.gallery__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.gallery__image {
+  margin: 20px;
 }
 
 .contact-form__input {
