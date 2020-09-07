@@ -3,6 +3,8 @@
 html {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  /* TODO: we should add a media query for that later :-) */
+  scroll-behavior: smooth;
 }
 
 *,
@@ -77,6 +79,20 @@ body > footer *::selection {
   margin-top: 80px;
 }
 
+.featured-recipe {
+  position: relative;
+}
+
+.featured-recipe__badge {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: salmon;
+  border: 3px solid gold;
+}
+
 .featured-recipe__title--hot::after {
   content: " 🔥";
 }
@@ -111,4 +127,20 @@ body > footer *::selection {
   padding: 16px;
   text-align: center;
   background-color: salmon;
+}
+
+/* Fixed content */
+
+.scroll-up {
+  display: block;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  padding: 5px;
+  border: 5px dashed gold;
+  text-decoration: none;
+}
+
+.scroll-up:hover {
+  background-color: gold;
 }
