@@ -1,11 +1,8 @@
 /* Global and general styling */
 
-* {
-  font-family: "Open Sans", sans-serif;
-}
-
 html {
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 *,
