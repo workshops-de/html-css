@@ -5,6 +5,7 @@ html {
   font-family: "Open Sans", sans-serif;
   /* TODO: we should add a media query for that later :-) */
   scroll-behavior: smooth;
+  font-size: 20px;
 }
 
 *,
@@ -49,31 +50,32 @@ article > h2 {
 article > h2::after {
   content: "";
   display: block;
-  height: 3px;
+  height: 0.2rem;
   flex-grow: 1;
-  margin-left: 15px;
+  margin-left: 1rem;
   background-color: salmon;
 }
 
 /* Use case specific styling */
 .header {
-  padding: 16px;
+  padding: 1rem;
   text-align: center;
   background-color: salmon;
 }
 
 .header__title {
   font-family: "Bangers", cursive;
-  text-shadow: 2px 2px white;
+  text-shadow: 0.1rem 0.1rem white;
+  font-size: 4rem;
 }
 
 .navigation > .navigation__item + .navigation__item {
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 .navigation__item {
   color: black;
-  padding: 4px;
+  padding: 0.2rem;
 }
 
 .navigation__item:hover {
@@ -86,13 +88,28 @@ article > h2::after {
 }
 
 .main {
-  padding: 16px;
-  max-width: 780px;
+  padding: 1rem;
+  max-width: 39rem;
   margin: 0 auto;
 }
 
 .main > * + * {
-  margin-top: 80px;
+  margin-top: 4rem;
+}
+
+.intro {
+  padding: 3rem 1rem;
+  font-size: 2rem;
+}
+
+.intro__quote {
+  text-align: justify;
+  border-left: 0.2rem solid salmon;
+  padding-left: 1rem;
+}
+
+.intro__author {
+  font-size: 0.4em;
 }
 
 .featured-recipes__content {
@@ -104,21 +121,21 @@ article > h2::after {
 }
 
 .featured-recipe + .featured-recipe {
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 .featured-recipe__badge {
   position: absolute;
-  left: 10px;
-  top: 10px;
-  padding: 5px;
-  border-radius: 5px;
+  left: 0.5rem;
+  top: 0.5rem;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
   background-color: salmon;
-  border: 3px solid gold;
+  border: 0.2rem solid gold;
 }
 
 .featured-recipe__title {
-  padding: 0 16px;
+  padding: 0 1rem;
   text-align: center;
 }
 
@@ -142,12 +159,12 @@ article > h2::after {
 }
 
 .gallery__image {
-  margin: 20px;
+  margin: 1rem;
 }
 
 .contact-form__input {
-  margin-bottom: 16px;
-  border-width: 2px;
+  margin-bottom: 1rem;
+  border-width: 0.2rem;
 }
 
 .contact-form__input:invalid {
@@ -164,7 +181,7 @@ article > h2::after {
 }
 
 .footer {
-  padding: 16px;
+  padding: 1rem;
   text-align: center;
   background-color: salmon;
 }
@@ -174,10 +191,10 @@ article > h2::after {
 .scroll-up {
   display: block;
   position: fixed;
-  bottom: 15px;
-  right: 15px;
-  padding: 5px;
-  border: 5px dashed gold;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  border: 0.5rem dashed gold;
   text-decoration: none;
 }
 
