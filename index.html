@@ -24,6 +24,7 @@
         <a class="navigation__item" href="#gallery">Gallery</a>
         <a class="navigation__item" href="#contact">Contact</a>
       </nav>
+      <input type="checkbox" id="theme-switch" class="header__theme-switch" />
     </header>
 
     <!-- Main content -->
@@ -146,5 +147,15 @@
 
     <!-- Elements with fixed positions -->
     <a class="scroll-up" href="#" title="Scroll me up scotty">👆</a>
+
+    <!-- Inline scripts -->
+    <script>
+      var themeSwitch = document.querySelector("#theme-switch");
+      if (themeSwitch) {
+        themeSwitch.addEventListener("click", function (e) {
+          document.body.classList.toggle("dark");
+        });
+      }
+    </script>
   </body>
 </html>

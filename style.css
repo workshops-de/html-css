@@ -1,5 +1,21 @@
 /* Global and general styling */
 
+:root {
+  --background: snow;
+  --foreground: #222;
+  --foreground-hf: #222;
+  --accent: salmon;
+  --highlight: gold;
+}
+
+body.dark {
+  --background: #222;
+  --foreground: snow;
+  --foreground-hf: #000;
+  --accent: indianred;
+  --highlight: peachpuff;
+}
+
 html {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
@@ -29,6 +45,7 @@ h6 {
 
 body {
   margin: 0;
+  background-color: var(--background);
 }
 
 img {
@@ -36,14 +53,14 @@ img {
 }
 
 *::selection {
-  background-color: salmon;
-  color: black;
+  background-color: var(--background);
+  color: var(--accent);
 }
 
 body > header *::selection,
 body > footer *::selection {
-  background-color: black;
-  color: salmon;
+  background-color: var(--background);
+  color: var(--accent);
 }
 
 article > h2 {
@@ -57,14 +74,16 @@ article > h2::after {
   height: 0.2rem;
   flex-grow: 1;
   margin-left: 1rem;
-  background-color: salmon;
+  background-color: var(--accent);
 }
 
 /* Use case specific styling */
 .header {
+  position: relative;
+  color: var(--foreground-hf);
   padding: 1rem;
   text-align: center;
-  background-color: salmon;
+  background-color: var(--accent);
 }
 
 .header__title {
@@ -76,7 +95,29 @@ article > h2::after {
 }
 
 .header__title:hover {
-  text-shadow: 0.3rem 0.3rem gold;
+  text-shadow: 0.3rem 0.3rem var(--highlight);
+}
+
+.header__theme-switch {
+  all: unset;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.1rem solid var(--foreground-hf);
+}
+
+.header__theme-switch:checked::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: var(--foreground-hf);
+  margin-left: 10%;
+  margin-top: 10%;
 }
 
 .navigation {
@@ -103,7 +144,7 @@ article > h2::after {
   height: 0.2rem;
   bottom: 0;
   left: 0;
-  background-color: gold;
+  background-color: var(--highlight);
   opacity: 0;
   transform: translateY(200%);
   transition-property: opacity, transform;
@@ -117,21 +158,22 @@ article > h2::after {
 }
 
 .navigation__item:focus {
-  color: black;
+  color: var(--foreground-hf);
   outline-offset: 0.5rem;
   outline-width: 0.1rem;
-  outline-color: gold;
+  outline-color: var(--highlight);
   outline-style: solid;
 }
 
 .navigation__item:active {
-  background-color: gold;
+  background-color: var(--highlight);
 }
 
 .main {
   padding: 1rem;
   max-width: 60rem; /* 960px */
   margin: 0 auto;
+  color: var(--foreground);
 }
 
 .main > * + * {
@@ -160,7 +202,7 @@ article > h2::after {
 
 .intro__quote {
   text-align: justify;
-  border-left: 0.2rem solid salmon;
+  border-left: 0.2rem solid var(--accent);
   padding-left: 1rem;
   margin-left: 0;
 }
@@ -197,8 +239,8 @@ article > h2::after {
   top: 0.5rem;
   padding: 0.4rem;
   border-radius: 0.4rem;
-  background-color: salmon;
-  border: 0.2rem solid gold;
+  background-color: var(--accent);
+  border: 0.2rem solid var(--highlight);
   opacity: 0;
   transform: translateY(-50%);
   transition-property: opacity, transform;
@@ -246,7 +288,7 @@ article > h2::after {
 }
 
 .contact-form__input:invalid {
-  border-color: salmon;
+  border-color: var(--accent);
 }
 
 .contact-form__textarea {
@@ -261,7 +303,7 @@ article > h2::after {
 .footer {
   padding: 1rem;
   text-align: center;
-  background-color: salmon;
+  background-color: var(--accent);
 }
 
 /* Fixed content */
@@ -272,13 +314,13 @@ article > h2::after {
   bottom: 1rem;
   right: 1rem;
   padding: 0.5rem;
-  border: 0.5rem solid gold;
+  border: 0.5rem solid var(--highlight);
   text-decoration: none;
   transition: transform 0.35s ease;
 }
 
 .scroll-up:focus,
 .scroll-up:hover {
-  background-color: gold;
+  background-color: var(--highlight);
   transform: scale(1.3);
 }
