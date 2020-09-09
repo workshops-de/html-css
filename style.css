@@ -3,9 +3,13 @@
 html {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-  /* TODO: we should add a media query for that later :-) */
-  scroll-behavior: smooth;
   font-size: 20px;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 *,
@@ -89,7 +93,7 @@ article > h2::after {
 
 .main {
   padding: 1rem;
-  max-width: 39rem;
+  max-width: 60rem; /* 960px */
   margin: 0 auto;
 }
 
@@ -97,15 +101,31 @@ article > h2::after {
   margin-top: 4rem;
 }
 
+@media screen and (min-width: 45rem) {
+  .main > * + * {
+    margin-top: 8rem;
+  }
+}
+
 .intro {
-  padding: 3rem 1rem;
-  font-size: 2rem;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 45rem) {
+  .intro {
+    padding: 3rem 1rem;
+    font-size: 2rem;
+    max-width: 35ch;
+  }
 }
 
 .intro__quote {
   text-align: justify;
   border-left: 0.2rem solid salmon;
   padding-left: 1rem;
+  margin-left: 0;
 }
 
 .intro__author {
@@ -114,14 +134,24 @@ article > h2::after {
 
 .featured-recipes__content {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (min-width: 37.5rem) {
+  .featured-recipes__content {
+    flex-wrap: nowrap;
+  }
 }
 
 .featured-recipe {
   position: relative;
 }
 
-.featured-recipe + .featured-recipe {
-  margin-left: 1rem;
+@media screen and (min-width: 37.5rem) {
+  .featured-recipe + .featured-recipe {
+    margin-left: 1rem;
+  }
 }
 
 .featured-recipe__badge {
@@ -156,6 +186,7 @@ article > h2::after {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
+  max-width: 40rem;
 }
 
 .gallery__image {
